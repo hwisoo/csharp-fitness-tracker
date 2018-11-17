@@ -15,16 +15,23 @@ namespace Fitness
         Console.WriteLine("Enter how many minutes you exercised: ");
         string entry = Console.ReadLine();
 
-        // Add minutes exercised to total
-        int minutes = int.Parse(entry);
-        runningTotal = runningTotal + minutes;
+        if(entry == "quit")
+        {
+          keepGoing = false;
+        }
+        else
+        {
+          // Add minutes exercised to total
+          int minutes = int.Parse(entry);
+          runningTotal = runningTotal + minutes;
 
-        // Display total minutes exercised to the screen
-        Console.WriteLine("You've entered " + runningTotal + " minutes.");
-
+          // Display total minutes exercised to the screen
+          Console.WriteLine("You've entered " + runningTotal + " minutes.");
+        }
+      
         //Repeat until user quits
       }
-
+      Console.WriteLine("Goodbye");
     }
   }
 }
