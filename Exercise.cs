@@ -6,7 +6,7 @@ namespace Fitness
   {
     static void Main()
     {
-      int runningTotal = 0;
+      double runningTotal = 0;
       bool keepGoing = true;
 
       while (keepGoing)
@@ -15,7 +15,7 @@ namespace Fitness
         Console.WriteLine("Enter how many minutes you exercised: ");
         string entry = Console.ReadLine();
 
-        if(entry == "quit")
+        if(entry.ToLower() == "quit")
         {
           keepGoing = false;
         }
@@ -25,7 +25,7 @@ namespace Fitness
           {
 
             // Add minutes exercised to total
-            int minutes = int.Parse(entry);
+            double minutes = double.Parse(entry);
 
             if(minutes <= 10)
             {
